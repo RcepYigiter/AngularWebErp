@@ -1,0 +1,47 @@
+<div class="flex w-full " style="height: 100%">
+    <div id="sidebar-menu" class="ibox overflow-auto"
+        style="border-right: 1px solid rgba(0, 0, 0, 0.06);">
+        <div class="ibox-content mailbox-content p-1">
+            <div class="file-manager md:min-w-56">
+
+                <div class="space-25"></div>
+                @for (item of menu; track $index) {
+                <div class="space-25"></div>
+                <h5>{{item.label}} </h5>
+                <ul class="folder-list m-b-md" style="padding: 0">
+                    @for (sub of item.submenu; track $index) {
+                    @if (sub.submenu.length==0) {
+                    <li class="hover:bg-slate-200 px-2"><a> <i class="{{sub.icon}}"></i> {{sub.label}}
+                        </a></li>
+                    }
+                    @else {
+                    <li>
+                        <div (click)="showSubMenu($index)" [ngClass]="{ 'show': show[$index] }"
+                            class="flex items-center justify-between hover:bg-slate-200 px-2 cursor-pointer">
+                            <a> <i class="fa fa-circle text-warning"></i> {{sub.label}} </a>
+
+                            @if (show[$index]) {<i class="fa-solid fa-sort-down"></i>}
+                            @else{
+                            <i class="fa-solid fa-caret-right"></i>
+                            }
+                        </div>
+                        <ul class="category-list sub-menu">
+                            @for (item of sub.submenu; track $index) { <li class="pl-4"><a> <i
+                                        class="fa fa-file "></i> {{item.label}}</a></li> }
+                        </ul>
+                    </li>
+                    }}
+                    <div class="clearfix"></div>
+                </ul>
+
+                }
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-9 animated fadeInRight">
+        <router-outlet ></router-outlet>
+
+    </div>
+</div>

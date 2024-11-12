@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { StokYonetimiComponent } from './pages/stok-yonetimi/stok-yonetimi.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+
+  // { path: '', loadChildren: () => import("../app/pages/stok-yonetimi/stok-yonetimi.module").then(m => m.StokYonetimiModule) }
+
+  {
+    path: "",
+    children: [
+      { path: 'stok-yonetimi', component: StokYonetimiComponent, loadChildren: () => import("../app/pages/stok-yonetimi/stok-yonetimi.module").then(m => m.StokYonetimiModule)},
+
+    ]
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
