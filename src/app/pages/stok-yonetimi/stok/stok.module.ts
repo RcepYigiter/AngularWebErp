@@ -5,11 +5,13 @@ import { StokKartiComponent } from './stok-karti/stok-karti.component';
 import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
 import { RouterModule } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { TreeViewComponent } from './components/stok-tree-node';
 
 @NgModule({
   declarations: [
     StokComponent,
-    StokKartiComponent
+    StokKartiComponent,
+    TreeViewComponent
   ],
   imports: [
     CommonModule,
