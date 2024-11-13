@@ -1,6 +1,5 @@
 <div class="flex w-full " style="height: 100%">
-    <div id="sidebar-menu" class="ibox overflow-auto"
-        style="border-right: 1px solid rgba(0, 0, 0, 0.06);">
+    <div id="sidebar-menu" class="ibox overflow-auto" style="border-right: 1px solid rgba(0, 0, 0, 0.06);">
         <div class="ibox-content mailbox-content p-1">
             <div class="file-manager md:min-w-56">
 
@@ -11,7 +10,8 @@
                 <ul class="folder-list m-b-md" style="padding: 0">
                     @for (sub of item.submenu; track $index) {
                     @if (sub.submenu.length==0) {
-                    <li class="hover:bg-slate-200 px-2"><a> <i class="{{sub.icon}}"></i> {{sub.label}}
+                    <li class="hover:bg-slate-200 px-2"><a routerLink="{{sub.href}}"> <i class="{{sub.icon}}"></i>
+                            {{sub.label}}
                         </a></li>
                     }
                     @else {
@@ -26,8 +26,8 @@
                             }
                         </div>
                         <ul class="category-list sub-menu">
-                            @for (item of sub.submenu; track $index) { <li class="pl-4"><a> <i
-                                        class="fa fa-file "></i> {{item.label}}</a></li> }
+                            @for (item of sub.submenu; track $index) { <li class="pl-4"><a routerLink="{{item.href}}" > <i class="fa fa-file "></i>
+                                    {{item.label}}</a></li> }
                         </ul>
                     </li>
                     }}
@@ -41,7 +41,7 @@
     </div>
 
     <div class="col-lg-9 animated fadeInRight">
-        <router-outlet ></router-outlet>
+        <router-outlet></router-outlet>
 
     </div>
 </div>

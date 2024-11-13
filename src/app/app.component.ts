@@ -26,7 +26,9 @@ export class AppComponent implements OnInit {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
         this.currentPath = event.urlAfterRedirects;
-        this.currentPath.slice(1);
+       
+
+        
 
         this.pathList = this.currentPath.slice(1).split('/');
         if (!this.pathList.includes('')) {
@@ -34,4 +36,49 @@ export class AppComponent implements OnInit {
         }
       });
   }
+
+  moduls = [
+    {
+      modul: 'Muhasebe',
+      icon: 'fa-solid fa-receipt',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: '',
+    },
+    {
+      modul: 'Stok',
+      icon: 'fa-solid fa-cubes',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: 'stok-yonetimi',
+    },
+    {
+      modul: 'Finans',
+      icon: 'fa-solid fa-coins',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: '',
+    },
+    {
+      modul: 'Satış',
+      icon: 'fa-solid fa-share-from-square',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: '',
+    },
+    {
+      modul: 'Satınalma',
+      icon: 'fa-solid fa-shop',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: '',
+    },
+    {
+      modul: 'Üretim',
+      icon: 'fa-solid fa-industry',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: '',
+    },
+    {
+      modul: 'Personel',
+      icon: 'fa-solid fa-users',
+      class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
+      href: '',
+    },
+  ];
 }

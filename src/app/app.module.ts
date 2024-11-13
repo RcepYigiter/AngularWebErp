@@ -22,8 +22,9 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { StokYonetimiModule } from './pages/stok-yonetimi/stok-yonetimi.module';
+import { BreadcrumbComponent } from './shared/utility/breadcrumb/breadcrumb.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,BreadcrumbComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,7 +36,7 @@ import { StokYonetimiModule } from './pages/stok-yonetimi/stok-yonetimi.module';
     NzMenuModule,
     NzDividerModule,
     NzBreadCrumbModule,
-
+    
   ],
   providers: [
     provideClientHydration(),

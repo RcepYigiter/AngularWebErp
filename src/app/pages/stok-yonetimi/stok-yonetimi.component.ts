@@ -10,16 +10,18 @@ export class StokYonetimiComponent {
     {
       label: 'Kartlar',
       icon: '',
+      href:'',
       submenu: [
-        { label: 'Stok', icon: 'fa fa-inbox', submenu: [] },
-        { label: 'Depo', icon: 'fa fa-inbox', submenu: [] },
-        { label: 'Hizmet', icon: 'fa fa-inbox', submenu: [] },
-        { label: 'Masraf', icon: 'fa fa-inbox', submenu: [] },
+        { label: 'Stok', icon: 'fa fa-inbox', submenu: [] ,href:'/stok-yonetimi/stok/stok-karti'},
+        { label: 'Depo', icon: 'fa fa-inbox', submenu: [],href:'' },
+        { label: 'Hizmet', icon: 'fa fa-inbox', submenu: [] ,href:''},
+        { label: 'Masraf', icon: 'fa fa-inbox', submenu: [],href:'' },
       ],
     },
     {
       label: 'Hareketler',
       icon: '',
+      href:'',
       submenu: [
         {
           label: 'Giriş',
@@ -28,34 +30,35 @@ export class StokYonetimiComponent {
             {
               label: 'Satınalma Mal Girişi',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
             {
               label: 'Konsiye Girişi',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
             {
               label: 'Konsiye Çıkıştan İade Alımı',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
             {
               label: 'Teşvikli İthalat',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
             {
               label: 'Teşviksiz İthalat',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
             {
               label: 'Fason Giriş',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
           ],
+          href:'',
         },
         {
           label: 'Çıkış',
@@ -64,19 +67,20 @@ export class StokYonetimiComponent {
             {
               label: 'Parakende Satış',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
             {
               label: 'Toptan Satış',
               icon: 'fa fa-circle text-warning',
-              submenu: [],
+              submenu: [],href:'',
             },
           ],
+          href:'',
         },
-        { label: 'Depo Transferi', icon: 'fa fa-circle text-warning', submenu: [] },
-        { label: 'Stok Devir', icon: 'fa fa-circle text-warning', submenu: [] },
-        { label: 'Barkod Oluştur', icon: 'fa fa-circle text-warning', submenu: [] },
-        { label: 'Maliyet Düzenle', icon: 'fa fa-circle text-warning', submenu: [] },
+        { label: 'Depo Transferi', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Stok Devir', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Barkod Oluştur', icon: 'fa fa-circle text-warning', submenu: [],href:'', },
+        { label: 'Maliyet Düzenle', icon: 'fa fa-circle text-warning', submenu: [],href:'', },
       ],
     },
   ];
