@@ -6,24 +6,30 @@ import { Node } from '../stok-karti/stok-karti.component';
   template: `
     <div *ngIf="node">
       <!-- Düğüm adı ve toggle için tıklanabilir alan -->
-      <span class="hover:bg-slate-200 px-2 block hover:text-cyan-700 text-slate-700 font-semibold"  (click)="toggleExpand(node)">
+      <span
+        class="hover:bg-slate-200 px-2 block hover:text-cyan-700 text-slate-700 font-semibold"
+      >
         @if (node.children!=null||undefined?node.children.length > 0:false) {
-        <span>
+        <span (click)="toggleExpand(node)">
           @if (node.expanded) {<i class="fa-solid fa-sort-down"></i>} @else{
           <i class="fa-solid fa-caret-right"></i>
           }
+          {{ node.name }}
         </span>
         } @else {
-        <span class="hover:bg-slate-200 px-2 hover:text-cyan-700 text-slate-700 font-semibold"> <i class="fa-solid fa-file"></i></span>
-        }
-
+        <span
+          class="hover:bg-slate-200 px-2 hover:text-cyan-700 text-slate-700 font-semibold"
+        >
+          <i class="fa-solid fa-file"></i
+        ></span>
         {{ node.name }}
+        }
       </span>
 
       <!-- Eğer node.expanded true ise, alt düğümleri listele -->
-      <ul *ngIf="node.expanded" >
+      <ul *ngIf="node.expanded">
         <ng-container *ngFor="let child of node.children">
-          <li >
+          <li>
             <app-tree-node [node]="child"></app-tree-node>
           </li>
         </ng-container>

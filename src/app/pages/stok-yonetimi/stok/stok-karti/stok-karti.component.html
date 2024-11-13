@@ -5,8 +5,8 @@ hh
   <ul  >
     <ng-container *ngFor="let node of treeData">
       <li (click)="test(node)">
-        <span class="hover:bg-slate-200 px-2 block hover:text-cyan-700 ">
-          <span (click)="toggleExpand(node)" *ngIf="node.children?.length > 0" class="text-slate-700 font-semibold">
+        <span class="hover:bg-slate-200 px-2 block">
+          <span (click)="toggleExpand(node)" *ngIf="node.children?.length > 0" class="text-slate-700 font-semibold hover:text-cyan-700">
             @if (node.expanded) {
               <i class="fa-solid fa-sort-down"></i>
             }
