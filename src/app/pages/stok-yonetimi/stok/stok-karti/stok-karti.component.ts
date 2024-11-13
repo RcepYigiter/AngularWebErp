@@ -30,10 +30,6 @@ export class StokKartiComponent {
     },
   ];
 
-
-
-
-
   treeData: Node[] = [
     {
       name: '150 - HAMMADDELER',
@@ -43,23 +39,41 @@ export class StokKartiComponent {
           name: '150.001 - SACLAR',
           expanded: false,
           children: [
-            { name: '150.001.001 - DKP SAC', expanded: false, children: [{ name: '150.001.001.001 - 1.2 MM DKP SAC' }, { name: '150.001.001.002 - 1.5 MM DKP SAC' }] },
-            { name: '150.001.002 - HRP SAC' }
-          ]
+            {
+              name: '150.001.001 - DKP SAC',
+              expanded: false,
+              children: [
+                { name: '150.001.001.001 - 1.2 MM DKP SAC' },
+                { name: '150.001.001.002 - 1.5 MM DKP SAC' },
+              ],
+            },
+            { name: '150.001.002 - HRP SAC' },
+          ],
         },
         { name: '150.002 - CİVATA VE SOMUN GRUBU' },
-        { name: '150.003 - PLASTİK GRUBU', expanded: false, children: [{ name: '150.003.001 - 20*55 CİVATALI LASTIK TAKOZ' }, { name: '150.003.002 - PLEXİ DÖKME 5MM 6520DF BEYAZ 200*200CM' }] }
-      ]
+        {
+          name: '150.003 - PLASTİK GRUBU',
+          expanded: false,
+          children: [
+            { name: '150.003.001 - 20*55 CİVATALI LASTIK TAKOZ' },
+            { name: '150.003.002 - PLEXİ DÖKME 5MM 6520DF BEYAZ 200*200CM' },
+          ],
+        },
+      ],
     },
     {
       name: '151 - YARIMAMUL',
       expanded: false,
       children: [
-        { name: '151.001 - TABAN', expanded: false, children: [{ name: '151.001.001 TABAN SACI' }] },
+        {
+          name: '151.001 - TABAN',
+          expanded: false,
+          children: [{ name: '151.001.001 TABAN SACI' }],
+        },
         { name: '151.002 - TAVAN' },
-        { name: '151.003 - DUVAR' }
-      ]
-    }
+        { name: '151.003 - DUVAR' },
+      ],
+    },
   ];
   // Düğümün açılmasını ve kapanmasını kontrol eden fonksiyon
   toggleExpand(node: Node): void {
@@ -68,7 +82,7 @@ export class StokKartiComponent {
     }
   }
 
-  test(node){
-    console.log(node)
+  test(node) {
+    console.log(node);
   }
 }

@@ -83,6 +83,38 @@ export class StokYonetimiComponent {
         { label: 'Maliyet Düzenle', icon: 'fa fa-circle text-warning', submenu: [],href:'', },
       ],
     },
+    {
+      label: 'Listeler',
+      icon: '',
+      href:'',
+      submenu: [
+  
+  
+        { label: 'Stok Listesi', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Stok Hareket Listesi', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Stok Bazında Hareketler', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Stok Toplam', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Depo Hareket Listesi', icon: 'fa fa-circle text-warning', submenu: [],href:'', },
+        { label: 'Depo Transfer Hareketleri', icon: 'fa fa-circle text-warning', submenu: [],href:'', },
+        { label: 'Hizmet Listesi', icon: 'fa fa-circle text-warning', submenu: [],href:'', },
+    
+      ],
+    },
+    {
+      label: 'Tanımlar',
+      icon: '',
+      href:'',
+      submenu: [
+  
+  
+        { label: 'Stok Sınıfları', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Hizmet Sınıfları', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Depo Sınıfları', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+        { label: 'Birim Tanımları', icon: 'fa fa-circle text-warning', submenu: [] ,href:'',},
+
+    
+      ],
+    },
   ];
 
   show: boolean[] = [false, false];

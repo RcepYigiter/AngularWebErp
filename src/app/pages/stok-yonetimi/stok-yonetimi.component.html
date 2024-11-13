@@ -1,7 +1,7 @@
-<div class="flex w-full " style="height: 100%">
-    <div id="sidebar-menu" class="ibox overflow-auto" style="border-right: 1px solid rgba(0, 0, 0, 0.06);">
+<div class="flex w-full " style="height: 100vh">
+    <div id="sidebar-menu" class="ibox overflow-auto " style="border-right: 1px solid rgba(0, 0, 0, 0.06);">
         <div class="ibox-content mailbox-content p-1">
-            <div class="file-manager md:min-w-56">
+            <div class="file-manager md:min-w-56 md:max-w-56">
 
                 <div class="space-25"></div>
                 @for (item of menu; track $index) {
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="col-lg-9 animated fadeInRight">
+    <div class="animated fadeInRight">
         <router-outlet></router-outlet>
 
     </div>
