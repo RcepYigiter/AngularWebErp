@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
       modul: 'Personel',
       icon: 'fa-solid fa-users',
       class: 'text-slate-600 text-2xl group-hover:text-cyan-700',
-      href: '',
+      href: 'personel',
     },
   ];
 }

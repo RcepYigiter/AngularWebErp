@@ -34,7 +34,7 @@
 
                     @for (item of moduls; track $index) {
                         <nz-divider class="my-0"></nz-divider>
-                        <a href="{{item.href}}" class="flex flex-col w-full py-1 items-center cursor-pointer hover:bg-slate-200 group">
+                        <a  routerLink="{{item.href}}" class="flex flex-col w-full py-1 items-center cursor-pointer hover:bg-slate-200 group">
                             <i class="{{item.icon}} " [ngClass]="item.class"></i>
                             <span class="text-slate-600  font-bold">{{item.modul}}</span>
                         </a>
@@ -65,7 +65,7 @@
                         </li>}
                         @else {
                         <li class="breadcrumb-item">
-                            <a href="{{item}}">Ana Sayfa</a>
+                            <a routerLink="{{item}}">Ana Sayfa</a>
                         </li>
                         }
 
@@ -76,7 +76,7 @@
                             <a class="cursor-text">{{item}}</a>
                             }
                             @else {
-                            <a href="{{item}}">{{item}}</a>
+                            <a  routerLink="{{item}}">{{item}}</a>
                             }
 
                         </li>
