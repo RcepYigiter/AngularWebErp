@@ -6,6 +6,9 @@ import { NzTreeViewModule } from 'ng-zorro-antd/tree-view';
 import { RouterModule } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { TreeViewComponent } from './components/stok-tree-node';
+import { FormsModule } from '@angular/forms';
+import { AgGridAngular } from 'ag-grid-angular';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 @NgModule({
   declarations: [
@@ -15,8 +18,11 @@ import { TreeViewComponent } from './components/stok-tree-node';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     NzTreeViewModule,
     NzIconModule,
+    AgGridAngular,
+    NzTableModule,
     RouterModule.forChild([
       { path: 'stok-karti', component: StokKartiComponent },
 

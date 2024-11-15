@@ -1,6 +1,6 @@
 import { registerLocaleData } from '@angular/common';
 import tr from '@angular/common/locales/tr';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { tr_TR } from 'ng-zorro-antd/i18n';
 import { AppComponent } from './app.component';
@@ -22,9 +22,8 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { StokYonetimiModule } from './pages/stok-yonetimi/stok-yonetimi.module';
-import { BreadcrumbComponent } from './shared/utility/breadcrumb/breadcrumb.component';
 @NgModule({
-  declarations: [AppComponent,BreadcrumbComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,10 +38,15 @@ import { BreadcrumbComponent } from './shared/utility/breadcrumb/breadcrumb.comp
     
   ],
   providers: [
+    { provide: "baseUrl", useValue: "https://localhost:7051/api", multi: true },
     provideClientHydration(),
     { provide: NZ_I18N, useValue: tr_TR },
     provideAnimationsAsync(),
     provideHttpClient(),
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   bootstrap: [AppComponent],
 })

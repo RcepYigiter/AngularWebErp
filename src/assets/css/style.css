@@ -2671,8 +2671,8 @@ div.dt-button-info {
 .pace .pace-progress {
   background: #1ab394;
   position: fixed;
-  z-index: 2040;
-  top: 0;
+  z-index: 1;
+  top: 70px;
   right: 100%;
   width: 100%;
   height: 2px;
@@ -7873,8 +7873,8 @@ body.body-small .vote-icon {
 .landing-page.pace .pace-progress {
   background: #fff;
   position: fixed;
-  z-index: 2000;
-  top: 0;
+  z-index: 1;
+  top: 70px;
   left: 0;
   height: 2px;
   -webkit-transition: width 1s;

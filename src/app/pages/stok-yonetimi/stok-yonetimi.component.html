@@ -1,14 +1,16 @@
 <div class="flex w-full " style="height: 100vh">
     <div id="sidebar-menu" class="ibox overflow-auto " style="border-right: 1px solid rgba(0, 0, 0, 0.06);">
         <div class="ibox-content mailbox-content p-1">
-            <div class="file-manager md:min-w-56 md:max-w-56">
+            <div class="file-manager  md:min-w-56 ">
 
                 <div class="space-25"></div>
+
                 @for (item of menu; track $index) {
                 <div class="space-25"></div>
                 <h5>{{item.label}} </h5>
                 <ul class="folder-list m-b-md" style="padding: 0">
                     @for (sub of item.submenu; track $index) {
+
                     @if (sub.submenu.length==0) {
                     <li class="hover:bg-slate-200 px-2"><a routerLink="{{sub.href}}"> <i class="{{sub.icon}}"></i>
                             {{sub.label}}
@@ -36,11 +38,12 @@
 
                 }
 
+
             </div>
         </div>
     </div>
 
-    <div class="animated fadeInRight">
+    <div class="animated fadeInRight w-full">
         <router-outlet></router-outlet>
 
     </div>
